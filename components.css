@@ -1,0 +1,33 @@
+* {
+    background: rgba(234, 236, 255, 1);
+    opacity: 1;
+}
+
+h1 {
+    width: 40rem;
+    color: rgba(0, 0, 0, 1);
+    font-family: Roboto;
+    font-size: 6rem;
+    opacity: 1;
+    text-align: center;
+    margin: auto;
+    margin-top: 6rem;
+    margin-bottom: 7rem;
+}
+
+.round-button {
+    border-radius: 50%;
+    border-width: 0px;
+}
+
+.container {
+    width: 50rem;
+    text-align: center;
+    margin: auto;
+}
+
+ion-icon {
+    font-size: 25rem;
+    border-radius: 50%;
+    background-color: rgb(189, 188, 188);
+}
