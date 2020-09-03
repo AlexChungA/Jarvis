@@ -4,7 +4,7 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background: rgb(234, 236, 255);
+  background: rgb(37, 36, 64);
 }
 
 /* Explorar */
@@ -13,7 +13,7 @@
   font-size: 50px;
   font-weight: 700;
   letter-spacing: 0px;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   vertical-align: middle;
   text-align: center;
   justify-content: center;
@@ -31,7 +31,7 @@
   font-size: 35px;
   font-weight: 500;
   letter-spacing: 0px;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   vertical-align: middle;
   text-align: center;
   justify-content: center;
@@ -66,7 +66,7 @@
 /* Rectangle 2 */
 #n11_18 {
   background: rgb(255, 255, 255);
-  box-shadow: rgb(0, 0, 0) 0px 0px 0px 1px inset;
+  box-shadow: rgb(255, 255, 255) 0px 0px 0px 1px inset;
 }
 
 /* image 6 */
@@ -87,7 +87,7 @@
   font-size: 40px;
   font-weight: 400;
   letter-spacing: 0px;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   vertical-align: middle;
   text-align: center;
   justify-content: center;
@@ -103,7 +103,7 @@
 #n10_22 {
   width: 155px;
   height: 145px;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 4px 0px;
+  box-shadow: rgba(255, 255, 255, 0.25) 0px 4px 4px 0px;
   left: 125px;
   top: 702px;
 }
@@ -131,7 +131,7 @@
 /* Rectangle 4 */
 #n11_54 {
   background: rgb(255, 255, 255);
-  box-shadow: rgb(0, 0, 0) 0px 0px 0px 1px inset;
+  box-shadow: rgb(255, 255, 255) 0px 0px 0px 1px inset;
 }
 
 /* Establece una alarma. */
@@ -140,7 +140,7 @@
   font-size: 28px;
   font-weight: 400;
   letter-spacing: 0px;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   vertical-align: middle;
   text-align: center;
   justify-content: center;
@@ -175,7 +175,7 @@
 /* Rectangle 6 */
 #n11_58 {
   background: rgb(255, 255, 255);
-  box-shadow: rgb(0, 0, 0) 0px 0px 0px 1px inset;
+  box-shadow: rgb(255, 255, 255) 0px 0px 0px 1px inset;
 }
 
 /* Establece un recordatorio. */
@@ -184,7 +184,7 @@
   font-size: 28px;
   font-weight: 400;
   letter-spacing: 0px;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   vertical-align: middle;
   text-align: center;
   justify-content: center;
@@ -207,7 +207,7 @@
 /* Rectangle 5 */
 #n11_56 {
   background: rgb(255, 255, 255);
-  box-shadow: rgb(0, 0, 0) 0px 0px 0px 1px inset;
+  box-shadow: rgb(255, 255, 255) 0px 0px 0px 1px inset;
 }
 
 /* Envia un mensaje. */
@@ -216,7 +216,7 @@
   font-size: 28px;
   font-weight: 400;
   letter-spacing: 0px;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   vertical-align: middle;
   justify-content: flex-start;
   transform: translate(0px, 0px);
@@ -250,7 +250,7 @@
 /* Rectangle 7 */
 #n11_60 {
   background: rgb(255, 255, 255);
-  box-shadow: rgb(0, 0, 0) 0px 0px 0px 1px inset;
+  box-shadow: rgb(255, 255, 255) 0px 0px 0px 1px inset;
 }
 
 /* Inicia con una frase... */
@@ -259,7 +259,7 @@
   font-size: 28px;
   font-weight: 400;
   letter-spacing: 0px;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   vertical-align: middle;
   text-align: center;
   justify-content: center;

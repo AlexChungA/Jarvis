@@ -1,0 +1,102 @@
+/* Mensaje */
+#n61_98 {
+  width: 428px;
+  height: 458px;
+}
+
+/* Rectangle 18 */
+#n61_92 {
+  background: rgb(37, 36, 64);
+  right: 2.49376%;
+  bottom: -40.69%;
+}
+
+/* boton micro */
+#n61_100 {
+  width: 137px;
+  height: 127px;
+  box-shadow: rgba(255, 255, 255, 0.25) 0px 4px 4px 0px;
+  left: 123px;
+  top: 469px;
+}
+
+/* image 2 */
+#nI61_100-4_8 {
+  background-image: url("https://s3-alpha-sig.figma.com/img/bde5/3088/a5633694ea26b78db5a7a405ed241dba?Expires=1599436800&Signature=ZZP~FD-SaX6QTlq2bQuIa3AMfzcB2AR~j1afY4SYv1QBtatGJSYVG1R2-CAzveXEYTSqTmOBOYQIDcZ4ivrH7MsHdP2CkLi9wamXUNTY~hsbWcgRV3CoAWmHLJ0a56-VFM7OQqB6hrO-w7VodLuA8D8Ou0pYcUcDv0XhSGa-DCrzQ8P0RPX89QBzlDZsZdho09bDYe5MoWVP4ENGGQcWEV6prF0ao557l5lHg0WvP-T868Dzo1LP3forEa50sAy3l0cZ9YVt4~WFvSefrDx5ZbZhqiWqwSxSoNi4trz8UNB8VY0-T4n~FxCZQ6Sxe7zSOauLKpP9Heg0z57A82tvKw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  left: 7.7348%;
+  right: 10.4972%;
+  top: 5.52%;
+  bottom: 6.08%;
+}
+
+/* ¿A quien desea enviar? */
+#n61_93 {
+  font-family: Roboto;
+  font-size: 35px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  color: rgb(255, 255, 255);
+  vertical-align: middle;
+  justify-content: flex-start;
+  transform: translate(0px, 0px);
+  line-height: 41.0156px;
+  left: 0.997511%;
+  right: 10.2244%;
+  top: 4.3%;
+  bottom: 83.95%;
+}
+
+/* Contenido del mensaje: */
+#n61_96 {
+  font-family: Roboto;
+  font-size: 35px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  color: rgb(255, 255, 255);
+  vertical-align: middle;
+  justify-content: flex-start;
+  transform: translate(0px, 0px);
+  line-height: 41.0156px;
+  left: 0.498748%;
+  right: 8.47881%;
+  top: 42.98%;
+  bottom: 45.27%;
+}
+
+/* Rectangle 19 */
+#n61_94 {
+  background: rgb(37, 36, 64);
+  box-shadow: rgb(255, 255, 255) 0px 0px 0px 1px inset;
+  left: 2.74315%;
+  right: 8.4788%;
+  top: 17.19%;
+  bottom: 62.18%;
+}
+
+/* Rectangle 20 */
+#n61_97 {
+  background: rgb(37, 36, 64);
+  box-shadow: rgb(255, 255, 255) 0px 0px 0px 1px inset;
+  left: 2.74315%;
+  right: 8.4788%;
+  top: 53.58%;
+}
+
+/* Ingresa correo o numero telefónico */
+#n61_95 {
+  font-family: Roboto;
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  color: rgba(213, 205, 205, 0.54);
+  vertical-align: middle;
+  justify-content: flex-start;
+  transform: translate(0px, 0px);
+  line-height: 25.7812px;
+  left: 4.73815%;
+  top: 23.78%;
+  bottom: 68.77%;
+}

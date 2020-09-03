@@ -1,11 +1,11 @@
 * {
-    background: rgba(234, 236, 255, 1);
+    background: rgba(37, 36, 64, 1);
     opacity: 1;
 }
 
 h1 {
     width: 40rem;
-    color: rgba(0, 0, 0, 1);
+    color: rgba(255, 255, 255, 1);
     font-family: Roboto;
     font-size: 6rem;
     opacity: 1;
