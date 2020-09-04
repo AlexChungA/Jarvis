@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 app.secret_key = "mysecretkey"
 
-inicio = ["Qué desea hacer", "Ver su calendario", "Leer pdf", "Ver su ubicación"]
+inicio = ["Qué desea hacer", "Ver su calendario", "Leer pdf", "Ver su ubicación", "conversar"]
 
 def actividades():
     for text in inicio:
@@ -33,7 +33,7 @@ def Index():
 
 @app.route('/conversa/<input>')
 def conversar(input):
-    t = threading.Thread(target=vi.respond,args=input)
+    t = threading.Thread(target=vi.respond,args=[input])
     t.start()
     return render_template('conversa.html')
 
