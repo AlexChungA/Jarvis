@@ -21,17 +21,28 @@ h1 {
 
 .square-button {
     margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+    color: black;
 }
 
 .round-button {
     border-radius: 50%;
     border-width: 0px;
+    color: black
 }
 
 #round {
     margin: 2rem 2rem 2rem 2rem;
     font-size: 18rem;
     border-radius: 50%;
+}
+
+.home-button {
+    margin: 0rem 30rem 0rem 0rem;
+    text-align: left;
+}
+
+#home {
+    font-size: 4rem;
 }
 
 ion-icon {
