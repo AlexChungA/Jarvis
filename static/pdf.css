@@ -1,0 +1,44 @@
+* {
+    background: rgba(37, 36, 64, 1);
+    opacity: 1;
+}
+
+h1 {
+    width: 38rem;
+    color: rgba(255, 255, 255, 1);
+    font-family: Roboto;
+    font-size: 5rem;
+    opacity: 1;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 6rem;
+}
+
+.container-fluid {
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.square-button {
+    margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+}
+
+.round-button {
+    border-radius: 50%;
+    border-width: 0px;
+}
+
+ion-icon {
+    font-size: 16rem;
+    background-color: rgb(189, 188, 188);
+}
+
+@media (max-width: 576px) {
+    h1 {
+        width: 18rem;
+        font-size: 3rem;
+    }
+    ion-icon {
+        font-size: 2rem;
+    }
+}
