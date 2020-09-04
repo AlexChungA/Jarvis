@@ -37,6 +37,18 @@ def conversar(input):
     t.start()
     return render_template('conversa.html')
 
+@app.route('/calendario')
+def calendario():
+    return render_template('calendar.html')
+
+@app.route('/archivos')
+def archivo():
+    return render_template('pdf.html')
+
+@app.route('/mapa')
+def mapa():
+    return render_template('mapa.html')
+
 
 if __name__ == '__main__':
     app.run(debug=False)

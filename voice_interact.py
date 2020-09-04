@@ -23,8 +23,6 @@ class asis:
     def setName(self, name):
         self.name = name
 
-
-
 def there_exists(terms):
     for term in terms:
         if term in voice_data:
@@ -94,19 +92,7 @@ def respond(voice_data):
         if term in voice_data:
             engine_speak("estoy muy bien, gracias por preguntar " + person_obj.name)
 
-    # 4: time
-    for term in ["qué hora es","dime la hora","qué hora tienes","tienes hora"]:
-        if term in voice_data:
-            time = ctime().split(" ")[3].split(":")[0:2]
-            if time[0] == "00":
-                hours = '12'
-            else:
-                hours = time[0]
-            minutes = time[1]
-            time = "Son las "+ hours + " con " + minutes + "minutos"
-            engine_speak(time)
-
-    # 5: search google
+    # 4: search google
     for term in ["busca en google","buscar en google"]:
         if 'youtube' not in voice_data:
             if term in voice_data:
@@ -121,7 +107,7 @@ def respond(voice_data):
         webbrowser.get().open(url)
         engine_speak("Esto es lo que encontre sobre " + search_term + "en google")
 
-    # 6: search youtube
+    # 5: search youtube
     if "youtube" in voice_data:
         search_term = voice_data.split("busca")[-1]
         search_term = search_term.replace("en youtube","").replace("busca","")
@@ -129,7 +115,7 @@ def respond(voice_data):
         webbrowser.get().open(url)
         engine_speak("Esto es lo que encontre sobre " + search_term + "en youtube")
 
-     #7: get stock price
+     #6: get stock price
     if "precio del " in voice_data:
         search_term = voice_data.split("del")[-1]
         url = "https://google.com/search?q=" + search_term
@@ -137,7 +123,7 @@ def respond(voice_data):
         engine_speak("Esto es lo que encontre para " + search_term + " en google")
     
     
-     #9 weather
+     #7 weather
     if "clima" in voice_data:
         search_term = voice_data.split("clima")[-1]
         url = "https://www.google.com/search?sxsrf=ACYBGNSQwMLDByBwdVFIUCbQqya-ET7AAA%3A1578847393212&ei=oUwbXtbXDN-C4-EP-5u82AE&q=weather&oq=weather&gs_l=psy-ab.3..35i39i285i70i256j0i67l4j0i131i67j0i131j0i67l2j0.1630.4591..5475...1.2..2.322.1659.9j5j0j1......0....1..gws-wiz.....10..0i71j35i39j35i362i39._5eSPD47bv8&ved=0ahUKEwiWrJvwwP7mAhVfwTgGHfsNDxsQ4dUDCAs&uact=5"
@@ -145,7 +131,7 @@ def respond(voice_data):
         engine_speak("Este es el clima hoy")
      
 
-     #10 stone paper scisorrs
+     #8 stone paper scisorrs
     if "jugar" in voice_data:
         voice_data = record_audio("escoge entre piedra, papel o tijeras")
         moves=["piedra", "papel", "tijeras"]
@@ -172,14 +158,14 @@ def respond(voice_data):
         elif pmove== "tijeras" and cmove== "piedra":
             engine_speak("Yo gané")
 
-     #11 toss a coin
+     #9 toss a coin
     for term in ["tira","gira","moneda"]:
         if term in voice_data:
             moves=["cara", "sello"]   
             cmove=random.choice(moves)
             engine_speak("Salió " + cmove)
 
-     #12 calc
+     #10 calc
     for term in ["multiplica","+","menos","por","entre","al"]:
         if term in voice_data:
             opr = voice_data.split()[1]
