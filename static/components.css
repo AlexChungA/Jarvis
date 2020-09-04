@@ -4,15 +4,19 @@
 }
 
 h1 {
-    width: 40rem;
+    width: 38rem;
     color: rgba(255, 255, 255, 1);
     font-family: Roboto;
-    font-size: 6rem;
+    font-size: 5rem;
     opacity: 1;
     text-align: center;
     margin: auto;
-    margin-top: 6rem;
-    margin-bottom: 7rem;
+    margin-bottom: 6rem;
+}
+
+.container-fluid {
+    text-align: center;
+    margin-top: 4rem;
 }
 
 .round-button {
@@ -20,14 +24,18 @@ h1 {
     border-width: 0px;
 }
 
-.container {
-    width: 50rem;
-    text-align: center;
-    margin: auto;
-}
-
 ion-icon {
-    font-size: 25rem;
+    font-size: 18rem;
     border-radius: 50%;
     background-color: rgb(189, 188, 188);
+}
+
+@media (max-width: 576px) {
+    h1 {
+        width: 18rem;
+        font-size: 3rem;
+    }
+    ion-icon {
+        font-size: 10rem;
+    }
 }
