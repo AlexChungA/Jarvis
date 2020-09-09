@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for, flash, copy_current_request_context
-import concurrent.futures
+#import concurrent.futures
 import threading
 import voice_interact as vi
 
@@ -10,8 +10,14 @@ app.secret_key = "mysecretkey"
 inicio = ["Qué desea hacer", "Ver su calendario", "Leer pdf", "Ver su ubicación", "conversar"]
 
 def actividades():
-    for text in inicio:
-        vi.engine_speak(text)
+    vi.engine_speak("¿Conoces mis funciones?")
+    respuesta = vi.record_audio("")
+    if "sí" in respuesta:
+        vi.engine_speak("Presione el botón del medio para decirme que desea hacer")
+    if "no" in respuesta:
+        for text in inicio:
+            vi.engine_speak(text)
+        vi.engine_speak("Presione el botón del medio para decirme que desea hacer")
 
 @app.route('/acciones')
 def acciones():
@@ -31,12 +37,6 @@ def Index():
     t.start()      
     return render_template('index.html')
 
-@app.route('/conversa/<input>')
-def conversar(input):
-    t = threading.Thread(target=vi.respond,args=[input])
-    t.start()
-    return render_template('conversa.html')
-
 @app.route('/calendario')
 def calendario():
     return render_template('calendar.html')
@@ -47,7 +47,13 @@ def archivo():
 
 @app.route('/mapa')
 def mapa():
-    return render_template('mapa.html')
+    return render_template('mapa.html')    
+
+@app.route('/conversa/<input>')
+def conversar(input):
+    t = threading.Thread(target=vi.respond,args=[input])
+    t.start()
+    return render_template('conversa.html')
 
 
 if __name__ == '__main__':
