@@ -62,7 +62,7 @@ def respond(voice_data):
     # 1: greeting
     for term in ['hey','hola','aló']:
         if term in voice_data:
-            greetings = ["hola, ¿cómo puedo ayudarte?" + person_obj.name, "hola, ¿qué tal?" + person_obj.name, "Te escucho" + person_obj.name, "¿Te puedo ayudar?" + person_obj.name, "hola" + person_obj.name]
+            greetings = ["hola, ¿cuál es tu nombre?" +"hola, ¿cómo estás?" + person_obj.name, "hola, ¿qué tal?" + person_obj.name, "hola" + person_obj.name]
             greet = greetings[random.randint(0,len(greetings)-1)]
             engine_speak(greet)
 

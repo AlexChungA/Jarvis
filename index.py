@@ -15,28 +15,31 @@ url = ['https://www.google.com/maps/embed/v1/search?key=AIzaSyAWoYcJvFqk76P_YE6C
 primera_vez = [True]*5
 
 def actividades(pagina):
-    if pagina == "mapa":
-        vi.engine_speak("Usted se encuentra en algún lugar cerca de aquí")
-    if pagina == "calendario":
-        vi.engine_speak("Aquí le muestro sus actividades programadas para esta semana")
-    introduccion = vi.record_audio("¿Necesitas ayuda?")
-    if "sí" in introduccion:
-        respuesta = vi.record_audio(f"¿Conoces mis funciones para {pagina}?")
-        if "sí" in respuesta:
-            vi.engine_speak("Presione el botón del medio para decirme que desea hacer")
-        elif "no" in respuesta:
-            if pagina == "inicio":
-                for text in actividades_inicio:
-                    vi.engine_speak(text)
-            elif pagina == "calendario":
-                for text in actividades_calendario:
-                    vi.engine_speak(text)
-            elif pagina == "mapa":
-                for text in actividades_mapa:
-                    vi.engine_speak(text)
-            vi.engine_speak("Presione el botón del medio para decirme que desea hacer")
-    elif "no" in introduccion:
-        vi.engine_speak("Si necesitas algo, puedes presionar el botón del medio para llamarme.")
+    if pagina == "conversa":
+        vi.engine_speak("Presione el botón del medio para iniciar una conversación")
+    else:
+        if pagina == "mapa":
+            vi.engine_speak("Usted se encuentra en algún lugar cerca de aquí")
+        if pagina == "calendario":
+            vi.engine_speak("Aquí le muestro sus actividades programadas para esta semana")
+        introduccion = vi.record_audio("¿Necesitas ayuda?")
+        if "sí" in introduccion:
+            respuesta = vi.record_audio(f"¿Conoces mis funciones para {pagina}?")
+            if "sí" in respuesta:
+                vi.engine_speak("Presione el botón del medio para decirme que desea hacer")
+            elif "no" in respuesta:
+                if pagina == "inicio":
+                    for text in actividades_inicio:
+                        vi.engine_speak(text)
+                elif pagina == "calendario":
+                    for text in actividades_calendario:
+                        vi.engine_speak(text)
+                elif pagina == "mapa":
+                    for text in actividades_mapa:
+                        vi.engine_speak(text)
+                vi.engine_speak("Presione el botón del medio para decirme que desea hacer")
+        elif "no" in introduccion:
+            vi.engine_speak("Si necesitas algo, puedes presionar el botón del medio para llamarme.")
 
 @app.route('/calendario/acciones')
 def funciones_calendario():
@@ -81,7 +84,7 @@ def funciones_calendario():
 @app.route('/mapa/acciones')
 def funciones_mapa():
     respuesta = vi.record_audio("¿Qué quieres que haga?")
-    elif "llegar" in respuesta:
+    if "llegar" in respuesta:
         respuesta = vi.record_audio("Direccion de partida")
         origin = "+".join(respuesta.split())
         respuesta = vi.record_audio("Direccion de destino")
@@ -97,6 +100,12 @@ def funciones_mapa():
         url.append(url_buscar)
         vi.engine_speak("En el mapa se muestra lo que solicitó")
     return redirect(url_for('mapa'))
+
+@app.route('/conversa/conversando')
+def conversando():
+    user_input = vi.record_audio("")
+    vi.respond(user_input)
+    return redirect(url_for('conversar'))
 
 @app.route('/acciones')
 def acciones():
@@ -141,19 +150,19 @@ def mapa():
 
 @app.route('/conversa')
 def conversar(input):
-    '''
     if primera_vez[4]: 
-        t = threading.Thread(target=vi.respond,args=[input])
+        t = threading.Thread(target=actividades, args=["conversa"])
         t.start()
-    '''
+    primera_vez[4] = False
     return render_template('conversa.html')
 
 @app.route('/upload', methods=['GET', 'POST'])
 def upload():
     pdf = request.form.get("pdf_loc")
-    if(pdf):
+    print(pdf)
+    if pdf:
         # la variable pdf contiene el archivo
-        return(str(pdf))
+        return str(pdf)
     else:
         return
 
