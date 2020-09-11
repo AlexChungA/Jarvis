@@ -163,7 +163,7 @@ def conversar():
 def upload():
     pdf = request.form['pdf_loc']
     if pdf:
-        path = f'docs\{pdf}'
+        path = f'static\{pdf}'
         pdfFunc.readLines(path,0,1)
         return redirect(url_for('archivo'))
     else:
