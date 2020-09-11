@@ -34,7 +34,10 @@ def record_audio(ask=""):
     with sr.Microphone() as source: # microphone as source
         if ask:
             engine_speak(ask)
-        audio = r.listen(source, 5, 5)  # listen for the audio via source
+        try:
+            audio = r.listen(source, 5, 5)  # listen for the audio via source
+        except sr.WaitTimeoutError:
+            exit()
         print("Terminé de escucharte fuerte y claro")
         voice_data = ''
         try:
@@ -89,7 +92,7 @@ def respond(voice_data):
         asis_obj.setName(asis_name) # remember name in asis object
 
     # 3: greeting
-    for term in ["cómo estas","qué tal la estas pasando"]:
+    for term in ["cómo estás","qué tal la estás pasando"]:
         if term in voice_data:
             engine_speak("estoy muy bien, gracias por preguntar " + person_obj.name)
 
@@ -167,7 +170,7 @@ def respond(voice_data):
             engine_speak("Salió " + cmove)
 
      #10 calc
-    for term in ["multiplica","+","menos","por","entre","al"]:
+    for term in ["multiplica","+","menos","por","entre","ala"]:
         if term in voice_data:
             opr = voice_data.split()[1]
 
@@ -179,7 +182,7 @@ def respond(voice_data):
                 engine_speak(int(voice_data.split()[0]) * int(voice_data.split()[2]))
             elif opr == 'entre':
                 engine_speak(int(voice_data.split()[0])/int(voice_data.split()[2]))
-            elif opr == 'al':
+            elif opr == 'ala':
                 engine_speak(int(voice_data.split()[0]) ** int(voice_data.split()[2]))
             else:
                 engine_speak("Operador Incorrecto")
@@ -197,4 +200,3 @@ person_obj = person()
 asis_obj = asis()
 asis_obj.name = 'jarvis'
 person_obj.name = ""
-respond("dónde estoy")
