@@ -149,7 +149,7 @@ def mapa():
     return render_template('mapa.html',iframe_url=url[0])    
 
 @app.route('/conversa')
-def conversar(input):
+def conversar():
     if primera_vez[4]: 
         t = threading.Thread(target=actividades, args=["conversa"])
         t.start()
