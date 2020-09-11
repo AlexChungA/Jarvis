@@ -7,7 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="..\static\styles.css">
     <link rel="stylesheet" href="..\static\index.css">
     <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
 
@@ -20,29 +19,12 @@
             <ion-icon name="home-outline" id="home"></ion-icon>
         </a>
         <h1 class="title">Calendario</h1>
+        <a href="/calendario/acciones" class="round-button">
+            <ion-icon name="mic" id="round"></ion-icon>
+        </a>
     </div>
-    <div class="calendar">
-        <div class="calendar__info">
-            <div class="calendar__prev" id="prev-month">&#9664;</div>
-            <div class="calendar__month" id="month"></div>
-            <div class="calendar__year" id="year"></div>
-            <div class="calendar__next" id="next-month">&#9654;</div>
-        </div>
-
-        <div class="calendar__week">
-            <div class="calendar__day calendar__item">Lu</div>
-            <div class="calendar__day calendar__item">Ma</div>
-            <div class="calendar__day calendar__item">Mi</div>
-            <div class="calendar__day calendar__item">Ju</div>
-            <div class="calendar__day calendar__item">Vi</div>
-            <div class="calendar__day calendar__item">Sa</div>
-            <div class="calendar__day calendar__item">Do</div>
-        </div>
-
-        <div class="calendar__dates" id="dates"></div>
-    </div>
-
-    <script src="{{url_for('.static', filename='scripts.js')}}"></script>
+    <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FLima&amp;src=Y2FsZW5kYXJpby5zZXJ2aWNlLmJsaW5kQGdtYWlsLmNvbQ&amp;src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;src=ZXMucGUjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%23039BE5&amp;color=%2333B679&amp;color=%230B8043&amp;showTitle=0&amp;showTz=0&amp;mode=WEEK"
+        style="border-width:0; font-size:large" width="800" height="600" frameborder="0" scrolling="no" class="container-fluid"></iframe>
 </body>
 
 </html>

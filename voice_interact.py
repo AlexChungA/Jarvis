@@ -41,6 +41,7 @@ def record_audio(ask=""):
             voice_data = r.recognize_google(audio,language="es-PE")  # convert audio to text
         except sr.UnknownValueError: # error: recognizer does not understand
             engine_speak('No te escuché bien')
+            return record_audio("Repítelo, porfavor")
         except sr.RequestError:
             engine_speak('Disculpa, el servidor se cayó') # error: recognizer is not connected
         print(">>", voice_data.lower()) # print what user said
@@ -188,18 +189,6 @@ def respond(voice_data):
             engine_speak("nos vemos")
             exit()
 
-    # Current city or region
-    if "dónde estoy" in voice_data:
-        Ip_info = requests.get('https://api.ipdata.co?api-key=test').json()
-        loc = Ip_info['region']
-        engine_speak(f"Estás en algún lugar en {loc}")    
-   
-   # Current location as per Google maps
-    if "dime mi ubicación exacta" in voice_data:
-        url = "https://www.google.com/maps/search/Where+am+I+?/"
-        webbrowser.get().open(url)
-        engine_speak("Deberías estar cerca de aquí, según google maps")    
-
 
 
 time.sleep(1)
@@ -208,3 +197,4 @@ person_obj = person()
 asis_obj = asis()
 asis_obj.name = 'jarvis'
 person_obj.name = ""
+respond("dónde estoy")

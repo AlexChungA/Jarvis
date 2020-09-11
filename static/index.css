@@ -1,4 +1,9 @@
 * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
     background: rgba(37, 36, 64, 1);
     opacity: 1;
 }
@@ -49,6 +54,10 @@ h1 {
 ion-icon {
     font-size: 8rem;
     background-color: rgb(189, 188, 188);
+}
+
+.calendar-container {
+    font-size: xx-large;
 }
 
 @media (max-width: 576px) {
