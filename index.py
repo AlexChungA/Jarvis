@@ -164,11 +164,12 @@ def upload():
     pdf = request.form['pdf_loc']
     if pdf:
         path = f'docs\{pdf}'
-        print(path)
-        pdfFunc.readLines(path)
-        return render_template('pdf.html')
+        pdfFunc.readLines(path,1,2)
+        print("sali de la lectura")
+        return redirect(url_for('archivo'))
     else:
-        return render_template('pdf.html')
+        return redirect(url_for('archivo'))
+    print("sali del if els")
 
 if __name__ == '__main__':
     app.run()

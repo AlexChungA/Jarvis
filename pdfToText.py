@@ -4,17 +4,20 @@ import voice_interact as vi
 from io import StringIO
 
 # Read each line of the PDF
-def readLines(path):
-    pdfContent = StringIO(getPDFContent(path))
+def readLines(path,inicio,fin):
+    pdfContent = StringIO(getPDFContent(path,inicio,fin))
     for line in pdfContent:
-        tts = vi.gTTS(text=line.strip(), lang='es')
-        print(line.strip())
-        audio_file = "pdf.mp3"
-        tts.save(audio_file)
-        vi.playsound.playsound(audio_file)
-        vi.os.remove(audio_file)
+        try:
+            tts = vi.gTTS(text=line.strip(), lang='es')
+            print(line.strip())
+            audio_file = "pdf.mp3"
+            tts.save(audio_file)
+            vi.playsound.playsound(audio_file)
+            vi.os.remove(audio_file)
+        except:
+            exit()
 
-def getPDFContent(path):
+def getPDFContent(path,inicio,fin):
     # creating a pdf file object
     pdfFileObj = open(path, 'rb')
 
@@ -23,23 +26,8 @@ def getPDFContent(path):
 
     textoPDF = []
 
-    for i in range(6,39):
+    for i in range(inicio,fin):
     # creating a page object
-        pageObj = pdfReader.getPage(i)
-        textoPaginaPDF = pageObj.extractText()
-        textoPDF.append(textoPaginaPDF)
-    for i in range(42,43):
-        pageObj = pdfReader.getPage(i)
-        textoPaginaPDF = pageObj.extractText()
-        textoPDF.append(textoPaginaPDF)
-    for i in range(45,46):
-        pageObj = pdfReader.getPage(i)
-        textoPaginaPDF = pageObj.extractText()
-        textoPDF.append(textoPaginaPDF)
-    pageObj = pdfReader.getPage(48)
-    textoPaginaPDF = pageObj.extractText()
-    textoPDF.append(textoPaginaPDF)
-    for i in range(51,53):
         pageObj = pdfReader.getPage(i)
         textoPaginaPDF = pageObj.extractText()
         textoPDF.append(textoPaginaPDF)
