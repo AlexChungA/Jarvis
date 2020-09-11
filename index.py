@@ -2,7 +2,6 @@ from flask import Flask, render_template, request, redirect, url_for, flash
 import threading
 import voice_interact as vi
 import calendar_func as cf
-import requests
 import pdfToText as pdfFunc
 
 app = Flask(__name__)

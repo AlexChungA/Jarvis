@@ -2,16 +2,10 @@ import speech_recognition as sr # recognise speech
 import playsound # to play an audio file
 from gtts import gTTS # google text to speech
 import random
-from time import ctime # get time details
 import webbrowser # open browser
 import ssl
 import certifi
-import time
 import os # to remove created audio files
-import subprocess
-import bs4 as bs
-import urllib.request
-import requests
 
 class person:
     name = ''
@@ -65,7 +59,7 @@ def respond(voice_data):
     # 1: greeting
     for term in ['hey','hola','aló']:
         if term in voice_data:
-            greetings = ["hola, ¿cuál es tu nombre?" +"hola, ¿cómo estás?" + person_obj.name, "hola, ¿qué tal?" + person_obj.name, "hola" + person_obj.name]
+            greetings = ["hola, ¿cuál es tu nombre?","hola, ¿cómo estás?" + person_obj.name, "hola, ¿qué tal?" + person_obj.name, "hola" + person_obj.name]
             greet = greetings[random.randint(0,len(greetings)-1)]
             engine_speak(greet)
 
@@ -192,9 +186,6 @@ def respond(voice_data):
             engine_speak("nos vemos")
             exit()
 
-
-
-time.sleep(1)
 
 person_obj = person()
 asis_obj = asis()
