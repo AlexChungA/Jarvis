@@ -27,7 +27,7 @@ playsound==1.2.2
 protobuf==3.13.0
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
-PyAudio==0.2.11
+PyAudio @ file:///C:/Users/ALEX%20CHUNG/Desktop/Topicos%20I/PyAudio-0.2.11-cp38-cp38-win_amd64.whl
 pycparser==2.20
 PyPDF2==1.26.0
 pytz==2020.1
