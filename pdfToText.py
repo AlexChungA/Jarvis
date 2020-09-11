@@ -8,6 +8,7 @@ def readLines(path):
     pdfContent = StringIO(getPDFContent(path))
     for line in pdfContent:
         tts = vi.gTTS(text=line.strip(), lang='es')
+        print(line.strip())
         audio_file = "pdf.mp3"
         tts.save(audio_file)
         vi.playsound.playsound(audio_file)
@@ -46,5 +47,3 @@ def getPDFContent(path):
     pdfFileObj.close()
     content = "".join(textoPDF)
     return content
-
-readLines('docs\la-reforma-incompleta-web.pdf')

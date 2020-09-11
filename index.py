@@ -3,6 +3,7 @@ import threading
 import voice_interact as vi
 import calendar_func as cf
 import requests
+import pdfToText as pdfFunc
 
 app = Flask(__name__)
 
@@ -162,8 +163,9 @@ def conversar():
 def upload():
     pdf = request.form['pdf_loc']
     if pdf:
-        # la variable pdf contiene el archivo -- programar aqui
-        print(str(pdf))
+        path = f'docs\{pdf}'
+        print(path)
+        pdfFunc.readLines(path)
         return render_template('pdf.html')
     else:
         return render_template('pdf.html')
