@@ -138,7 +138,7 @@ def calendario():
     return render_template('calendar.html')
 
 @app.route('/archivos')
-def archivo():
+def archivo(methods=['GET', 'POST']):
     #if primera_vez[2]: 
     return render_template('pdf.html')
 
@@ -160,13 +160,13 @@ def conversar():
 
 @app.route('/upload', methods=['GET', 'POST'])
 def upload():
-    pdf = request.form.get("pdf_loc")
-    print(pdf)
+    pdf = request.form['pdf_loc']
     if pdf:
-        # la variable pdf contiene el archivo
-        return str(pdf)
+        # la variable pdf contiene el archivo -- programar aqui
+        print(str(pdf))
+        return render_template('pdf.html')
     else:
-        return
+        return render_template('pdf.html')
 
 if __name__ == '__main__':
     app.run()
