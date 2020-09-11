@@ -81,7 +81,7 @@ def funciones_calendario():
 @app.route('/mapa/acciones')
 def funciones_mapa():
     respuesta = vi.record_audio("¿Qué quieres que haga?")
-    elif "llegar" in respuesta:
+    if "llegar" in respuesta:
         respuesta = vi.record_audio("Direccion de partida")
         origin = "+".join(respuesta.split())
         respuesta = vi.record_audio("Direccion de destino")
