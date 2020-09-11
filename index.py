@@ -148,6 +148,14 @@ def conversar(input):
     '''
     return render_template('conversa.html')
 
+@app.route('/upload', methods=['GET', 'POST'])
+def upload():
+    pdf = request.form.get("pdf_loc")
+    if(pdf):
+        # la variable pdf contiene el archivo
+        return(str(pdf))
+    else:
+        return
 
 if __name__ == '__main__':
     app.run()
