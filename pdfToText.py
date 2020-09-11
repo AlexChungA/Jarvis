@@ -6,7 +6,7 @@ from io import StringIO
 # Read each line of the PDF
 def readLines(path,inicio,fin):
     pdfContent = StringIO(getPDFContent(path,inicio,fin))
-    for line in pdfContent.readlines()[:-1]:
+    for line in pdfContent.readlines():
         try:
             tts = vi.gTTS(text=line, lang='es')
             audio_file = "pdf.mp3"
@@ -14,7 +14,8 @@ def readLines(path,inicio,fin):
             vi.playsound.playsound(audio_file)
             vi.os.remove(audio_file)
         except:
-            exit()
+            pass
+        
 
 def getPDFContent(path,inicio,fin):
     # creating a pdf file object

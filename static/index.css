@@ -56,6 +56,12 @@ ion-icon {
     background-color: rgb(189, 188, 188);
 }
 
+.square-button input {
+    overflow: visible;
+    background: white;
+    font-size: xxx-large;
+}
+
 .calendar-container {
     font-size: xx-large;
 }

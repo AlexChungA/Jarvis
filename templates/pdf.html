@@ -17,11 +17,16 @@
         </a>
         <h1>Leer el archivo</h1>
         <form action="/upload" method="post">
-            <input type="file" name="pdf_loc" accept=".pdf"><br/>
-            <input type="submit" value="cargar"><br/>
+            <label for="file-upload" class="square-button">
+                <ion-icon name="document-text-outline"></ion-icon>
+                <input id="file-upload" type="file" name="pdf_loc" accept=".pdf">
+            </label><br/>
+            <button type="submit" value="cargar" class="square-button">
+            <ion-icon name="book-outline"></ion-icon></button>
+            <br/>
         </form>
         <!--a class="round-button" href="/upload">
-            <ion-icon name="book-outline"></ion-icon>
+            
         </a-->
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
