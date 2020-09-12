@@ -80,27 +80,27 @@ def get_date(text):
     return datetime.date(year=year,month=month,day=day)
 
 def get_hour(text):
-    if "am" in text:
+    if "a.m" in text:
         if ("las" in text) and ("y" in text):
-            hours = int(text.split("las")[1].split("am")[0].split("y")[0])
-            minutes = int(text.split("las")[1].split("am")[0].split("y")[1])
+            hours = int(text.split("las")[1].split("a.m")[0].split("y")[0])
+            minutes = int(text.split("las")[1].split("a.m")[0].split("y")[1])
             if "media" in text:
                 minutes = 30
         elif "las" in text:
-            hours = int(text.split("las")[1].split("am")[0].split(":")[0])
-            minutes = int(text.split("las")[1].split("am")[0].split(":")[1])
+            hours = int(text.split("las")[1].split("a.m")[0].split(":")[0])
+            minutes = int(text.split("las")[1].split("a.m")[0].split(":")[1])
         else:
             if "y" in text:
-                hours = int(text.split("am")[0].split("y")[0])
-                minutes = int(text.split("am")[0].split("y")[1])
+                hours = int(text.split("a.m")[0].split("y")[0])
+                minutes = int(text.split("a.m")[0].split("y")[1])
                 if "media" in text:
                     minutes = 30
             else:
                 if ":" in text:
-                    hours = int(text.split("am")[0].split(":")[0])
-                    minutes = int(text.split("am")[0].split(":")[1])
+                    hours = int(text.split("a.m")[0].split(":")[0])
+                    minutes = int(text.split("a.m")[0].split(":")[1])
                 else:
-                    hours = int(text.split("am")[0])
+                    hours = int(text.split("a.m")[0])
                     minutes = 0
     if "pm" in text:
         if ("las" in text) and ("y" in text):

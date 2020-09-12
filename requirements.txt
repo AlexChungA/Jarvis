@@ -25,7 +25,6 @@ playsound==1.2.2
 protobuf==3.13.0
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
-PyAudio
 pycparser==2.20
 PyPDF2==1.26.0
 pytz==2020.1
@@ -36,6 +35,7 @@ six==1.15.0
 soupsieve==2.0.1
 SpeechRecognition==3.8.1
 uritemplate==3.0.1
+urllib3==1.25.10
 Werkzeug==1.0.1
 zope.event==4.4
 zope.interface==5.1.0

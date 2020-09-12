@@ -29,7 +29,7 @@ def record_audio(ask=""):
         if ask:
             engine_speak(ask)
         try:
-            audio = r.listen(source, 5, 5)  # listen for the audio via source
+            audio = r.listen(source, 8, 8)  # listen for the audio via source
         except sr.WaitTimeoutError:
             exit()
         print("Terminé de escucharte fuerte y claro")
@@ -184,7 +184,7 @@ def respond(voice_data):
     for term in ["salir", "apagar", "adiós","hasta pronto", "chau","hasta luego"]:
         if term in voice_data:
             engine_speak("nos vemos")
-            exit()
+            pass
 
 
 person_obj = person()

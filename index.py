@@ -103,10 +103,12 @@ def funciones_mapa():
 
 @app.route('/conversa/conversando')
 def conversando():
-    user_input = ""
-    while (user_input!="adiós") or (user_input!="salir") or (user_input!="apagar") or (user_input!="adiós") or (user_input!="hasta pronto") or (user_input!="chau") or (user_input!="hasta luego"):
-        user_input = vi.record_audio("")
+    while 1:
+        user_input=""
+        user_input=vi.record_audio("")
         vi.respond(user_input)
+        if ("adiós" in user_input) or ("salir" in user_input) or ("apagar" in user_input) or ("adiós" in user_input) or ("hasta pronto" in user_input) or ("chau" in user_input) or ("hasta luego" in user_input):
+            break
     return redirect(url_for('conversar'))
 
 @app.route('/acciones')
